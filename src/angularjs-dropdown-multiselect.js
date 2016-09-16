@@ -276,7 +276,7 @@ directiveModule.directive('ngDropdownMultiselect', ['$filter', '$document', '$co
 			};
 
 			$scope.getPropertyForObject = function(object, property) {
-				if (angular.isDefined(object) && object.hasOwnProperty(property)) {
+				if (angular.isDefined(object) && _.get(object, property, false)) {
 					return object[property];
 				}
 
